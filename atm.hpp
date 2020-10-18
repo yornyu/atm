@@ -25,9 +25,16 @@ class ATM {
   Bank* bank;
   Account* cur_accout;
   int state;
+  static ATM* instance;
+  ATM(int atm_id);
 
  public:
-  ATM(int atm_id);
+  static ATM* getInstance(int atm_id) {
+    if (instance == nullptr) {
+      instance = new ATM(atm_id);
+    }
+    return instance;
+  }
   int getCardNumber();
   int getPIN();
   void run();
