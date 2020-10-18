@@ -15,3 +15,11 @@ select account type: 0 checking, 1 saving
 ctrl + c quit
 
 ```
+# Note
+```
+class slot handles card reading
+class cashbin handles cash bin deposoit/withdraw and balance check
+class account handles the account info
+class bank handles udpateing account info from remote
+class atm is the entry point
+```
